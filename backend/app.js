@@ -11,5 +11,10 @@ app.use(
 );
 
 app.use(express.json());
+app.use(express.static("images"));
+
+import fileRouter from "./routes/file.router.js";
+
+app.use("/api/v1/", fileRouter);
 
 export { app };
